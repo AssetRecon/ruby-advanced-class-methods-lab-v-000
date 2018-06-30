@@ -51,6 +51,14 @@ array2 = []
   song = self.new
   song.name = array2[0].strip
   song.artist_name = array[0].strip
+  @@all << song
   song
   end
 end
+
+def self.create_from_filename(filename)
+  new_from_filename
+  
+
+end
+
