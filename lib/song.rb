@@ -49,7 +49,7 @@ array2 = []
   array = filename.split("-")
   array2 = array[1].split(".")
   song = self.new
-  song.name = array2[0]
+  song.name = array2[0].strip
   song.artist_name = array[0]
   song
   end
