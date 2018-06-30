@@ -32,27 +32,18 @@ class Song
   end
 
   def self.find_by_name(song_name)
-      @@all.any? {|song|
-         if song.name == song_name
-         return song
-       else
-         nil
-       end}
+    self.all.detect{|s| s.name == song_name}
   end
 
 
+
   def self.find_or_create_by_name(song_name)
-     self.find_by_name(song_name) || self.create_by_name(song_name)
-   end
-
-
-#  def self.find_or_create_by_name(song_name)
-#    if find_by_name(song_name) != false || nil
-#      create_by_name(song_name)
-#    else
-#      return nil if find_by_name(song_name) == false
-#    end
-#  end
+    if find_by_name(song_name) != false || nil
+      create_by_name(song_name)
+    else
+      return nil if find_by_name(song_name) == false
+    end
+  end
 
   def self.alphabetical
     @@all.sort_by { |song| song.name }
