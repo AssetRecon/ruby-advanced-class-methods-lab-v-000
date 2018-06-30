@@ -41,6 +41,16 @@ class Song
     else
       create_by_name(song_name)
     end
-    end
-
+  end
+    
+  def new_from_filename(filename)
+array = []
+array2 = []
+  array = filename.split("-")
+  array2 = array[1].split(".")
+  song = self.new
+  song.name = array2[0]
+  song.artist_name = array[0]
+  song
+  end
 end
