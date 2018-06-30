@@ -56,7 +56,7 @@ array2 = []
   end
 
 def self.create_from_filename(filename)
-  new_from_filename
+  new_from_filename(filename)
 end
 
 
