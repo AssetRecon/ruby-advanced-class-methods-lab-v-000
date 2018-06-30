@@ -54,7 +54,6 @@ array2 = []
   @@all << song
   song
   end
-end
 
 def self.create_from_filename(filename)
   new_from_filename
