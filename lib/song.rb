@@ -29,7 +29,7 @@ class Song
     @@all << song
     song.name = song_name
     song
-    
+
   end
 
 end
