@@ -36,7 +36,7 @@ class Song
         if song.name == song_name
           found = song
         end
-        return found
+        found
       end
   end
 
