@@ -20,7 +20,7 @@ class Song
     @name = song_name
     newSong = self.new
     newSong
-    
+
 
   end
 
