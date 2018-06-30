@@ -36,7 +36,7 @@ class Song
          if song.name == song_name
          return song
        else
-         nil
+         return nil
        end}
   end
 
