@@ -36,10 +36,10 @@ class Song
   end
 
   def self.find_or_create_by_name(song_name)
-    if @@all.any? {|song| song.name == song_name} == true
-      find_by_name(song_name)
-    else
+    if find_by_name(song_name) != false || nil
       create_by_name(song_name)
+    else
+      find_by_name(song_name)
     end
   end
 
@@ -67,6 +67,5 @@ end
 def self.destroy_all
   @@all.clear
 end
-
 
 end
