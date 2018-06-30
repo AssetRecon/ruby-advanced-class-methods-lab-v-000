@@ -35,7 +35,7 @@ class Song
       @@all.any? {|song| return song if song.name == song_name}
   end
 
-  def find_or_create_by_name(song_name)
+  def self.find_or_create_by_name(song_name)
     if @@all.any? {|song| song.name == song_name}
       find_by_name
     else
